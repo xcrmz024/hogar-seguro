@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es"
+         xmlns:th="http://www.thymeleaf.org">
+    
+<head>
+    <!--meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--título-->
+    <title>Donar - Hogar Seguro</title>
+    <!--meta descripción-->
+    <meta name="description" 
+        content="Apoya a nuestro santuario vegano y ayuda a rescatar animales de la explotación. Completa el formulario de donación segura y contribuye al bienestar animal.">
+    <!--favicon-->
+    <link rel="icon" type="image/png" th:href="@{/favicon/favicon-96x96.png}" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" th:href="@{/favicon/favicon.svg}" />
+    <link rel="shortcut icon" th:href="@{/favicon/favicon.ico}" />
+    <link rel="apple-touch-icon" sizes="180x180" th:href="@{/favicon/apple-touch-icon.png}" />
+    <link rel="manifest" th:href="@{/favicon/site.webmanifest}" />
+    <!--Tipografías-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <!--hoja de estilos bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--biblioteca iconos bootsrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--hoja de estilos css-->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+
+<body class="donar-html">
+
+    <!--Formulario simulado - portal de donación-->
+    <section class="seccion-donar">
+
+        <div class="container donar-form col-8 p-5">
+            <div class="row text-center mb-5">
+                <div class="col-12">
+                    <h2>Realizar una Donación</h2>
+                    <p class="p-inicial">Tu apoyo directo nos ayuda a comprar alimento y medicinas para los habitantes del Santuario. <br>
+                        ¡Tu ayuda es agradecida!
+                    </p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    
+                    <div class="contenedor-formulario-donar">
+                        
+                        <form th:action="@{/donar}" th:object="${donationDto}" method="post">
+                            
+                            <div class="mb-4">
+                                <label for="name">Nombre Completo</label>
+                                <input type="text" th:field="*{name}" class="form-control shadow-sm" id="name" placeholder="Ej. Ana García">
+                                <div class="error-validacion" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-7 mb-4">
+                                    <label for="email">Correo Electrónico</label>
+                                    <input type="email" th:field="*{email}" class="form-control shadow-sm" id="email" placeholder="correo@ejemplo.com">
+                                    <div class="error-validacion" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+                                </div>
+
+                                <div class="col-md-5 mb-4">
+                                    <label for="amount">Monto</label>
+                                    <div class="input-group shadow-sm">
+                                        <span class="input-group-text">$</span>
+                                        <input type="number" step="0.01" th:field="*{amount}" class="form-control" id="amount">
+                                    </div>
+                                    <div class="error-validacion" th:if="${#fields.hasErrors('amount')}" th:errors="*{amount}"></div>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="message">Mensaje de apoyo</label>
+                                <textarea th:field="*{message}" class="form-control shadow-sm" id="message" rows="3" placeholder="Opcional..."></textarea>
+                                <div class="error-validacion" th:if="${#fields.hasErrors('message')}" th:errors="*{message}"></div>
+                            </div>
+
+                            <div class="text-center mt-4">
+                                <button type="submit" class="btn-confirmar-donacion">
+                                    ENVIAR DONACIÓN <i class="bi bi-heart-fill ms-2"></i>
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    
+<!--footer-->
+    <footer>
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+
+            <div class="row justify-content-center text-center">
+                <div class="col-9 col-md-8 copy">
+                    <p>Este es un portal de donación simulada. No se aceptan donaciones reales.</p>
+                    <p>Copyright © 2026 - Santuario Hogar Seguro Todos los derechos reservados.</p>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+</body>
+
+
+</html>

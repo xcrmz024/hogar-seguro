@@ -1,0 +1,1500 @@
+/*HOJA DE ESTILOS - SANTUARIO HOGAR SEGURO*/
+
+/*GENERALES*/
+h1 {
+    display: none;
+}
+
+.bienvenido-p {
+    font-family: "Signika", sans-serif;
+    font-style: normal;
+    margin-top: 85px;
+    margin-bottom: 55px;
+    font-size: 60px;
+    font-weight: 600; /*300-700 <weight>*/
+}
+
+h2 {
+    text-align: center;
+    font-family: "Signika", sans-serif;
+    font-style: normal;
+    color: #CCAE55;
+    padding-bottom: 28px;
+    font-size: 50px;
+    font-weight: 600; /*300-700 <weight>*/
+}
+
+h3 {
+    font-family: "Signika", sans-serif;
+    font-style: normal;
+    margin-bottom: 55px !important;
+    font-size: 60px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.colabora h4 {
+    font-family: "Signika", sans-serif;
+    font-style: normal;
+    color: #CCAE55;
+    padding-bottom: 28px;
+    text-align: left;
+    font-size: 30px;
+    font-weight: 670;
+}
+
+.gracias {
+    font-family: "Signika", sans-serif;
+    font-style: normal;
+    font-size: 40px;
+}
+
+.nav-link {
+    font-family: "Signika", sans-serif;
+    font-style: normal;
+    color: black;
+    font-size: 18px;
+    font-weight: 650;
+}
+
+.boton1 p, .boton2 p {
+    font-family: "Signika", sans-serif;
+    font-style: normal;
+
+}
+
+p {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    font-size: 16px;
+    font-weight: 400; /*300-800 <weight>*/
+    line-height: 1.5;
+}
+
+.p-inicial {
+    font-size: 18px;
+}
+
+span {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+section {
+    padding-top: 100px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/*NAV*/
+    /*nav-general*/
+nav {
+    position: sticky !important;
+    top: 0;
+}
+
+.navbar {
+    padding: 0;
+    height: 90px;
+    position: relative;
+    background-color: #ccae55;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 21%)
+}
+
+    /*nav-arriba (redes)*/
+.fila-nav {
+    background-color: #af8d29;
+    position: absolute;
+    top: 0;
+    height: 25px;
+    width: 100%;
+}
+
+.fila-nav a {
+    display: flex;
+    align-items: center;
+}
+
+.nav-contenedor .row .bi {
+    font-size: 13px;
+    color: white;
+    padding: 0 10px;
+    transition: all 0.3s ease;
+}
+
+.fila-nav .bi.bi-whatsapp {
+    margin-right: 340px;
+}
+
+.nav-contenedor .row .bi:hover {
+    color: #40550e;
+}
+
+    /*nav-abajo (logo y menu)*/
+.nav-abajo {
+    height: 66px;
+    margin-right: 150px;
+}
+
+.navbar-brand {
+    padding: 0;
+    z-index: 1;
+    width: auto;
+    height: 90px;
+}
+
+.navbar-brand img {
+    height: 100%;
+    max-height: 100%;
+    width: auto;
+    margin-left: 150px;
+}
+
+.nav-item a.inicio {
+    padding: 20px 47px !important;
+}
+
+.nav-link:hover,
+.active {
+    background-color: #d4ba6e;
+    color: white;
+}
+
+.nav-item a.habitantes,
+.nav-item a.ayudar {
+    padding: 20px 20px !important;
+}
+
+/*HEADER*/
+.hero-logo {
+    background-image: url(/imagenes/hero-inicio.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.hero-logo.index {
+    padding-bottom: 5%;
+}
+
+.hero-logo img {
+    width: 320px;
+    margin-bottom: 70px;
+}
+
+.boton1 p {
+    display: inline-block;
+    background-color: #011F69;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 20px 60px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.293);
+    transition: background-color 0.3s ease;
+}
+
+.boton2 p {
+    display: inline-block;
+    background-color: #586E26;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 20px 23px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.293);
+    transition: background-color 0.3s ease;
+}
+
+.boton1:hover p {
+    background-color: #01298e;
+}
+
+.boton2:hover p {
+    background-color: #779434;
+}
+
+/*HEADER (2pag - habitantes)*/
+.habitantes-inicio {
+    background-image: url(/imagenes/habitantes-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.habitantes-inicio .bienvenido-p, 
+.habitantes-inicio img {
+    visibility: hidden;
+}
+
+.habitantes-boton-header {
+    visibility: hidden;
+}
+
+/*HEADER (3pag - como-ayudar)*/
+.como-ayudar-inicio {
+    background-image: url(/imagenes/ayudar-hero.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.como-ayudar-inicio .bienvenido-p,
+.como-ayudar-inicio img {
+    visibility: hidden;
+}
+
+.ayudar-boton-header {
+    visibility: hidden;
+}
+
+/*SECTION-1-quienes*/
+.quienes-somos {
+    padding-top: 120px;
+    background-color: white;
+}
+
+.contenedor-quienes {
+    margin-bottom: 100px;
+    padding: 20px;
+}
+
+.quienes-somos .mision {
+    background-color: white;
+    border-radius: 30px;
+    padding: 12px 24px;
+    /*margin-bottom: 20px;
+    margin-top: 20px;*/
+}
+
+.quienes-somos .vision {
+    background-color: white;
+    border-radius: 30px;
+    padding: 12px 24px;
+    margin-bottom: 50px;
+}
+
+.quienes-somos span {
+    color: #CCAE55;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.quienes-somos img {
+    width: 100%;
+    height: auto;
+}
+
+/*SECTION-1-habitantes (2pag-habitantes)*/
+.row.justify-content-center.text-start.pb-5 {
+    padding-bottom: 10%;
+}
+
+section.habitantes {
+    background-color: white;
+    padding-bottom: 120px;
+}
+
+section.quienes.habitantes {
+    padding-top: 0;
+}
+
+section.habitantes .contenedor-quienes {
+   margin-bottom: 0;
+   padding-bottom: 100px;
+   padding-top: 0;
+}
+
+.conoce-habitantes {
+    margin-bottom: 55px !important;
+    font-size: 45px;
+    font-weight: 720;
+    text-align: center;
+}
+
+    /*cuadros de habitantes*/
+.habitantes .cuadro {
+    background-color: #f5efdd;
+    padding: 38px 38px;
+    margin-bottom: 22px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    /*Agregadov7 (3)*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empuja el botón al final si hay espacio */
+}
+
+.habitantes .hidden {
+    visibility: hidden;/*esconder boton de adoptar/amadrinar si habitante no esta disponible*/
+}
+
+        /*Agregadov7*/
+        /*evitar botones encimados q no interiferan entre si:*/
+.contenedor-botones-ayuda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px; /* ajusta la altura segun tamaño de botones */
+    margin-top: auto; /*para empujar todo el bloque hacia el fondo del cuadro */
+}
+
+        /*Agregadov7*/
+        /*evitar botones encimados si ambos visibles por error:*/
+.contenedor-botones-ayuda a.hidden {
+    display: none; /* display none porque el contenedor ya reserva el espacio */
+}
+
+
+.habitantes img {
+width: 100%;
+margin-bottom: 30px;
+border-radius: 30px;
+/*Agregadov7 (2)*/
+height: 300px;        
+object-fit: cover;
+}
+
+.habitantes .cuadros img {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.habitantes span {
+    color: black;
+}
+
+.habitantes-parrafo-largo {
+    display: inline-block;
+    height: 280px;
+}
+
+.amadrinar {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #586E26;
+    box-shadow: 0px 0px 10px #ebe3c8;
+    background-color: white;
+    border: solid 1px rgba(0, 0, 0, 0.057);
+    border-radius: 20px;
+    padding: 10px 35px;
+    /*margin-bottom: 0;*/
+    width: 150px;
+    /*margin: 0 auto;*/
+    /*Agregadov7 (1)*/
+    margin: 20px auto 0; /* Margen arriba de 20px, centrado horizontal */
+    transition: all 0.3s ease;
+}
+
+.amadrinar:hover {
+    background-color: #586E26;
+    color: white;
+}
+
+.adoptar {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #01298e;
+    box-shadow: 0px 0px 10px #ebe3c8;
+    background-color: white;
+    border: solid 1px rgba(0, 0, 0, 0.057);
+    border-radius: 20px;
+    padding: 10px 35px;
+    /*margin-top: 50px;*/
+    /*margin-bottom: 0;*/
+    width: 150px;
+    /*margin: 0 auto;*/
+    /*Agregadov7 (1)*/
+    margin: 20px auto 0; /* IGUAL QUE AMADRINAR: 20px arriba, centrado */
+    transition: all 0.3s ease;
+}
+
+.adoptar:hover {
+    background-color: #01298e;
+    color: white;
+}
+
+/*SECTION-1-colabora (3pag-Como-ayudar)*/
+section.colabora {
+    padding-top: 0;
+}
+
+.colabora {
+    background-color: #fbf9f1;
+    background-image: url(/imagenes/text2.png);
+}
+
+.colabora h3 {
+    margin-top: 15px;
+}
+
+.contenedor-colabora-1 {
+    background-color: white;
+    padding-bottom: 10%;
+}
+
+.p-inicial.diferencia {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+    /*cajas abajo*/
+.contenedor-colabora {
+    padding-top: 80px;
+    /*margin: 0 12px;*/
+}
+
+.colabora p {
+    margin-bottom: 20px;
+}
+
+.fila-colabora {
+    background-image: url(/imagenes/tri.png);
+    background-color: #f5f5f5a0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: solid 4px rgb(255, 255, 255);
+    border-radius: 0;
+    margin-bottom: 120px;
+    padding: 38px;
+}
+
+.colabora img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.237);
+}
+
+
+    /*row-haz-una-donacion*/
+.gracias {
+    color: #af8d29;
+    font-weight: 600;
+    font-size: 52px;
+}
+
+.transferencia {
+    font-weight: 700;
+}
+
+.subrayado {
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+.col-donar {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.237)
+}
+
+.colabora .boton1 {
+    margin-top: 15px;
+}
+
+    /*row-voluntariados*/
+::marker {
+    color:#CCAE55;
+}
+
+.col-voluntariados img {
+    margin-bottom: 10px;
+}
+
+.boton-quiero-saber p {
+    display: inline-block;
+    padding: 18px 35px;
+    border: solid 1px rgba(0, 0, 0, 0.307);
+    border-radius: 20px;
+    color: black;
+    font-weight: bold;
+    margin-top: 11px;
+    transition: all 0.3s ease;
+}
+
+.boton-quiero-saber p:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.237);
+}
+
+    /*amadrinar-adoptar*/
+.ver-habitantes p {
+    display: inline-block;
+    padding: 18px 35px;
+    border: solid 1px rgba(0, 0, 0, 0.307);
+    border-radius: 20px;
+    margin-top: 60px;
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.ver-habitantes p:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.237);
+}
+
+.ver-habitantes-contactanos p {
+    display: inline-block;
+    padding: 18px 35px;
+    border: solid 1px rgba(0, 0, 0, 0.307);
+    border-radius: 20px;
+    margin-top: 60px;
+    color: black;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.ver-habitantes-contactanos p:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.237);
+}
+
+
+    /*muchas-gracias*/
+.contenedor-ayudar-gracias {
+    background-image: url(/imagenes/muchas-gracias.png);
+    opacity: 0.7;
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+}
+
+.fila-gracias {
+    padding-bottom: 600px;
+}
+
+
+/*SECTION-2-que-hacemos*/
+.que-hacemos {
+    background-color: #fbf9f1;
+    background-image: url(/imagenes/tex-inicio.png);
+}
+
+.contenedor-que {
+    margin-bottom: 100px;
+    padding: 20px;
+}
+
+
+    /*rectangulo-cafe debajo*/
+.que-position-relative {
+    position: relative;
+}
+
+.rectangulo-que.row {
+    position: absolute;
+    top: 0;
+    background-color: #e8dfc0;
+    height: 325px;
+    width: 100%;
+    z-index: 1;
+}
+
+.que-hacemos.cuadros {
+    position: relative;
+    z-index: 2;
+}
+
+.que-hacemos .cuadro-1,
+.que-hacemos .cuadro-2,
+.que-hacemos .cuadro-3 {
+    position: relative;
+    z-index: 3;
+    background-color: #f5f5f5f1;
+    padding: 38px 38px;
+    margin-bottom: 22px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.que-hacemos .cuadros img {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/*SECTION-2-extrañamos (2pag-habitantes)*/
+.habitantes-fallecidos {
+    display: none;
+}
+
+.section-h5-ayuda {
+    display: none;
+}
+
+section.extrañamos {
+    background-image: url(/imagenes/extrañamos-fondo.png);
+    background-size: cover;
+    background-color: #fbf9f1; 
+    padding: 25px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.quienes-extrañamos {
+    font-family: "Signika", sans-serif;
+    font-style: normal;
+    color: #CCAE55;
+    margin-top: 60px;
+    padding-bottom: 28px;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 550;
+}
+
+    /*cuadro-blanco*/
+section.extrañamos .contenedor-historia {
+    background-color: rgba(255, 255, 255, 0.546);
+    background-image: url(/imagenes/liston.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    box-shadow: 0px 0px 10px #d2d2d2dc;
+    border-radius: 0;
+    margin-bottom: 120px;
+    padding: 30px;
+}
+
+.extrañamos .cuadro-1,
+.extrañamos .cuadro-2 {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 38px 38px;
+    margin-bottom: 22px;
+}
+
+.extrañamos img {
+    width: 80%;
+    margin-bottom: 30px;
+    border-radius: 50%;
+}
+
+.nombre-ziggy {
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.p-ziggy {
+    text-align: left;
+}
+
+.extrañamos .contenedor-botones {
+    background-color: white;
+}
+
+/*SECTION-3-historia*/
+.historia {
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.contenedor-historia {
+    background-color: rgba(255, 255, 255, 0.341);
+    box-shadow: 0px 0px 10px #e3e3e3dc;
+    border-radius: 20px;
+    padding: 75px 30px;
+}
+
+.fila-historia1 {
+    margin-bottom: 40px;
+}
+
+.col-fundacion,
+.col-expansion {
+    padding: 20px;
+}
+
+.col-2018 p {
+    padding: 20px;
+}
+
+.historia img {
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.contenedor-botones {
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+
+/*FOOTER*/
+footer {
+    padding-top: 80px;
+    background-image: url(/imagenes/footer.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+    /*columna1 (contactanos)*/
+.contactanos {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    background-color: #d7bf7e;
+    color: white;
+    font-weight: bold;
+    padding: 10px 55px;
+    margin-bottom: 10%;
+}
+    /*columna2 (redes)*/
+.columna2 {
+    text-align: right;
+}
+
+.redes {
+    display: inline-block;
+    background-color: #d7bf7e;
+    color: white;
+    font-weight: bold;
+    padding: 10px 85px;
+    margin-bottom: 10%;
+}
+
+
+    /*divs iconos-texto (a-p-i)*/
+footer .columna1,
+footer .columna2 {
+    margin-bottom: 6%;
+}
+
+.icono-texto a {
+    display: flex !important;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.icono-texto p {
+    color: black;
+    transition: all 0.2s ease;
+}
+
+.icono-texto p:hover {
+    color:#af8d29;
+}
+
+.icono-texto.media a {
+    justify-content: end;
+}
+
+footer .row .bi {
+    font-size: 19px;
+    color: #ccae55;
+    padding: 0 10px;
+}
+
+    /*copyright*/
+footer .copy {
+    border-top: solid 2px #a4a4a2;
+    margin-bottom: 2%;
+}
+
+footer .copy p {
+    color: #858585;
+    padding-top: 2%;
+}
+
+/*FLECHA-fija*/
+.hacia-arriba {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: inline-block;
+    width: 60px; 
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.286);
+    z-index: 9;
+}
+
+.hacia-arriba img {
+    display: block;
+    width: 100%; 
+    height: auto;
+}
+
+
+
+/*---------------------------------------*/
+/*Donar.html - Agregadosv9 (todo)*/
+/*---------------------------------------*/
+
+body.donar-html {
+    background-image: url("/imagenes/text2.png"); 
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+section.seccion-donar {
+    padding-top: 80px;
+    padding-bottom: 120px 
+}
+
+
+    /*Contenedor formulario blanco con borde */
+.container.donar-form {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 51px;
+    background-color: white;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.05);
+}
+
+    /*Estilos de fuente para etiquetas*/
+.contenedor-formulario-donar label {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+    /*Botón de envío*/
+.btn-confirmar-donacion {
+    display: inline-block;
+    background-color: #011F69; 
+    color: white !important;
+    font-family: "Signika", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    padding: 15px 45px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none; 
+}
+
+    /*Hover del botón */
+.btn-confirmar-donacion:hover {
+    background-color: #1d4dc7;
+    transform: translateY(-2px);
+    color: white;
+}
+
+.error-validacion {
+    color: #b02a37;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/*---------------------------------------*/
+/*gracias.html (type=donar) - Agregadosv10 (todo)*/
+/*---------------------------------------*/
+
+.seccion-gracias {
+    padding: 100px 0;
+    background-image: url("/imagenes/text2.png");
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.card-gracias {
+    background: white;
+    border-radius: 51px;
+    padding: 60px;
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.icono-gracias {
+    font-size: 4rem;
+    color: #586E26;
+    margin-bottom: 20px;
+}
+
+
+
+
+/*---------------------------------------*/
+/*solicitud.html (type=solicitud) - Agregadosv11 (todo)*/
+/*---------------------------------------*/
+
+body.solicitud-html {
+    background-image: url("/imagenes/text2.png"); 
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+section.seccion-solicitud {
+    padding-top: 80px;
+    padding-bottom: 120px;
+}
+
+
+.container.solicitud-form {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 51px;
+    background-color: white;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.05);
+}
+
+
+.seccion-solicitud label {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+
+
+/*---------------------------------------*/
+/*login.html - Agregadosv13 (todo)*/
+/*---------------------------------------*/
+
+body { 
+    background-color: #f8f9fa; 
+}
+
+
+.login-container { 
+    max-width: 400px; margin-top: 100px; 
+}
+
+
+.card { 
+    border: none; border-radius: 15px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------MEDIA QUERYS-----*/
+
+/*NAV*/
+@media (max-width: 992px) {
+    /*redes*/
+    .fila-nav .bi.bi-whatsapp {
+        margin-right: 30px;
+    }
+
+    /*logo*/
+    .navbar-brand img {
+        margin-left: 6px;
+    }
+}
+
+@media (min-width: 992px) {
+    /*iconos-nav-normal*/
+    .hamburguesa-colapsado i {
+        display: none;
+    }  
+    
+    .nav-link:hover,
+    .active {
+    height: 66px;
+    }
+    
+    .hamburguesa-colapsado.nav-abajo-redes {
+        display: none;
+    }
+}
+      
+@media (max-width: 991px) {
+    /*redes (responsive)*/
+    .nav-contenedor .fila-nav a {
+        display: none;
+    }
+
+    /*boton hamburguesa*/
+    button.navbar-toggler {
+        margin-top: 24px !important;
+        border: none;
+    }
+
+    /*menu-expandido (colapsado)*/
+    div#menu02 {
+        z-index: 9;
+        margin-right: 0;
+        margin-left: 30%;  
+    }
+
+    .hamburguesa-colapsado {
+        background-color: #ececec;
+        padding: 10px 20px;
+        padding-bottom: 28px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.308)
+    }
+
+    .hamburguesa-colapsado li {
+        margin: 10px 0;
+        /*border: solid 2px #f8efd8;*/
+    }
+
+    .hamburguesa-colapsado li.active {
+        background-color: #ffffff;
+    }
+
+    .hamburguesa-colapsado  .nav-link:hover {
+        background-color: #ffffff;
+        color: black;
+    }
+
+
+    .nav-item a.inicio,
+    .nav-item a.habitantes,
+    .nav-item a.ayudar {
+        padding: 8% !important;
+        font-size: 20px;
+    }
+
+    /*iconos menu-expandido (colapsado)*/
+    .nav-link {
+        display: flex; 
+        align-items: center; 
+        justify-content: flex-end; 
+        gap: 8px; 
+    }
+
+    .hamburguesa-colapsado i {
+        font-size: 40px;
+        color:black;
+    }
+    
+    .nav-link i {
+        margin-left: 20px;
+    }
+
+    /*.nav-item:hover .nav-link {
+        color:#af8d29;
+    }*/
+
+    .nav-item:hover .nav-link i {
+        color:black;
+    }
+
+    /*iconos redes (menu colapsado)*/
+    .nav-abajo-redes {
+        border: none !important;
+        margin-top: 40px !important;
+    }
+
+    .nav-abajo-redes i {
+        font-size: 23px;
+        padding: 0 30px;
+        color: rgb(192, 192, 192);
+        transition: all 0.3s ease;
+    }
+
+    .nav-abajo-redes i:hover {
+        color: #ffffff;
+    }
+}
+
+@media (max-width: 768px) {
+    /*nav (posicion)*/
+    nav {
+        position: static !important;
+    }
+}
+
+@media (max-width: 576px) {
+    /*menu-colapsado (posicion)*/
+    div#menu02 {
+        z-index: 9;
+        margin-left: 0%;
+    }
+} 
+
+
+@media (max-width: 500px) {
+    /*nav-responsivo*/
+    .nav-item a.inicio, .nav-item a.habitantes, .nav-item a.ayudar {
+        font-size: 15px;
+        padding: 4% 8%;
+    }
+
+    .hamburguesa-colapsado li {
+        margin: 0;
+    }
+
+    .hamburguesa-colapsado i {
+        font-size: 24px;
+    }
+
+    .nav-abajo-redes i {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 991px) {
+    /*nav-responsivo*/
+    .nav-item a.inicio, .nav-item a.habitantes, .nav-item a.ayudar {
+        font-size: 15px;
+        padding: 4% 8%;
+    }
+
+    .hamburguesa-colapsado i {
+        font-size: 24px;
+    }
+
+    .nav-abajo-redes i {
+        font-size: 13px;
+    }
+
+    div#menu02 {
+        margin-left: 41%;
+    }
+}
+
+
+
+
+/*HEADER*/
+/*HEADER - habitantes (2pag)*/
+@media (max-width: 500px) {
+.habitantes-inicio {
+    background-image: url(/imagenes/habitantes500.jpg);
+}
+}
+
+/*HEADER - como-ayudar (3pag)*/
+@media (max-width: 500px) {
+    .como-ayudar-inicio {
+        background-image: url(/imagenes/ayuda500.jpg);
+    }
+    }
+
+/*SECTION-1-quienes*/
+@media (min-width: 992px) and (max-width: 1200px) {
+    .imagen-quienes {
+        display: flex;
+        align-items: center;
+    }
+}
+
+    
+@media (min-width: 501px) and (max-width: 1199px) {
+    /*encabezados y generales responsivo*/
+    .bienvenido-p {
+        font-size: 50px;
+    }
+
+    .hero-logo img {
+        width: 285px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .p-inicial {
+        font-size: 17px;
+    }
+
+    h2 {
+        font-size: 42px;
+    }
+
+    h3 {
+        font-size: 46px;
+    }
+
+    .quienes-extrañamos {
+        font-size: 40px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    /*encabezados y generales responsivo*/
+
+    .bienvenido-p {
+        font-size: 42px;
+    }
+
+    .hero-logo img {
+        width: 228px;
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    .p-inicial {
+        font-size: 16px;
+    }
+
+    .boton1 p {
+        font-size: 14px;
+        padding: 18px 54px;
+    }
+
+    .boton2 p {
+        font-size: 14px;
+        padding: 18px 21px;
+    }
+
+    h2 {
+        font-size: 33px;
+    }
+
+    h3 {
+        font-size: 40px;
+    }
+
+    .quienes-extrañamos {
+        font-size: 36px;
+    }
+
+    .p-inicial.diferencia{
+        font-size: 17px;
+    }
+
+    .colabora h4 {
+        font-size: 25px;
+        padding-bottom: 18px;
+    }
+
+}
+
+/*SECTION-1-habitantes (2pag-habitantes)*/
+@media (max-width: 1399px) {
+    .habitantes-parrafo-largo {
+        display: inline-block;
+        height: 330px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .habitantes-parrafo-largo {
+        display: inline-block;
+        height: 240px;
+    }
+}
+
+@media (max-width: 767px) {
+    .habitantes-parrafo-largo {
+        display: inline-block;
+        height: 270px;
+    }
+
+    .amadrinar {
+        width: 240px;
+        padding: 20px 0;
+    }
+    
+    .adoptar {
+        width: 240px; 
+        padding: 20px 0;
+    }
+}
+
+@media (max-width: 500px) {
+    /*botones responsivo*/
+    .amadrinar {
+        width: 171px;
+        padding: 14px 0;
+        font-size: 17px;
+    }
+
+    .adoptar {
+        width: 171px;
+        padding: 14px 0;
+        font-size: 17px;
+    }
+}
+
+/*SECCION-1-como-ayudar (3pag como-ayudar)*/
+@media (min-width: 1400px) {
+    /*caja-col-amadrina*/
+    .col-12.col-xxl-5 {
+        margin-left: 45px;
+    }
+}
+
+@media (max-width: 991px) {
+    /*cuadros-blancos*/
+    .fila-colabora {
+        background-position: top;
+    }
+}
+
+@media (max-width: 768px) {
+    /*cajas*/
+    .row.fila-colabora.mx-1 {
+        padding: 12px;
+    }
+
+    /*botones*/
+    .ver-habitantes p {
+        margin-top: 30px;
+    }
+
+    .ver-habitantes-contactanos p {
+        margin-top: 30px;
+    }
+
+    /*iamgen-fondo-gracias*/
+    .fila-gracias {
+        padding-bottom: 280px;
+    }
+
+    .contenedor-ayudar-gracias {
+        background-size: contain;
+        background-position: bottom;
+}
+}
+
+@media (max-width: 575px) {
+    .fila-gracias {
+        padding-bottom: 200px;
+    }
+
+    .gracias {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 500px) {
+     /*botones-responsivo*/
+    .colabora .boton1 p {
+        font-size: 13px;
+        padding: 16px 48px;
+    }
+
+    .boton-quiero-saber p {
+        padding: 14px 21px;
+        font-size: 13px;
+    }
+
+    .ver-habitantes p {
+        padding: 16px 22px;
+        font-size: 13px;
+    }
+
+    .ver-habitantes-contactanos p {
+        padding: 16px 22px;
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 1400px){
+    /*boton quiero saber*/
+    .boton-quiero-saber p{
+        margin-top: 50px
+    }
+}
+
+/*SECTION-2-que-hacemos*/
+@media (max-width: 768px) {
+    .contenedor-que {
+        padding: 37px;
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (min-width: 1200px) and (max-width: 1920px) {
+    /*1 estructura cajas (col-xl-3) (visible)*/
+    .que-position-relative.uno {
+        display: inline-block;
+    }
+
+    .que-position-relative.dos {
+        display: none;
+    }
+
+    .que-position-relative.tres {
+        display: none;
+    }
+}
+
+    /*2 estructura cajas (col-md-5) (visible)*/
+@media (min-width: 768px) and (max-width: 1199px) {
+    .que-position-relative.uno {
+        display: none;
+    }
+
+    .que-position-relative.tres {
+        display: none;
+    }
+}
+
+    /*3 estrucutra cajas (col-12) (visible)*/
+@media (min-width: 375px) and (max-width: 767px) {
+    .que-position-relative.uno {
+        display: none;
+    }
+
+    .que-position-relative.dos {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .que-position-relative.tres .rectangulo-que.row {
+        height: 450px;
+    }
+}
+
+/*SECTION-2-extrañamos (2pag habitantes)*/
+@media (max-width: 991px) {
+    section.extrañamos .contenedor-historia {
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: auto;
+    }
+
+    .extrañamos .cuadro-1 {
+        padding-top: 250px;
+}
+}
+
+@media (max-width: 767px) {
+.extrañamos .cuadro-1, .extrañamos .cuadro-2 {
+    padding-left: 0;
+    padding-right: 0;
+}
+        
+}   
+
+/*SECTION-3-historia*/
+@media (max-width: 1200px) {
+    .contenedor-historia span {
+        display: block;
+        text-align: center;
+    }
+}
+
+/*FOOTER*/
+@media (max-width: 768px) {
+    .columna1,.columna2 {
+        text-align: center; 
+    }
+  
+    .icono-texto.contacta a{
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        margin: auto !important;
+    }
+
+    .icono-texto a {
+        justify-content: center;
+    }
+}
+
+/*FLECHA-fija*/
+@media (min-width: 768px) {
+    .hacia-arriba {
+        display: none;
+    }
+}

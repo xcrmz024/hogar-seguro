@@ -1,0 +1,144 @@
+<!DOCTYPE html> <!--Estructura html 5-->
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <!--meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--título-->
+    <title>Formulario de Habitantes - Admin Hogar Seguro</title>
+    <!--meta descripción-->
+    <meta name="description" content="Formulario de administración para crear, editar o eliminar habitantes del Santuario Hogar Seguro. Permite gestionar la información de los residentes de forma segura.">
+     <!--favicon-->
+    <link rel="icon" type="image/png" th:href="@{/favicon/favicon-96x96.png}" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" th:href="@{/favicon/favicon.svg}" />
+    <link rel="shortcut icon" th:href="@{/favicon/favicon.ico}" />
+    <link rel="apple-touch-icon" sizes="180x180" th:href="@{/favicon/apple-touch-icon.png}" />
+    <link rel="manifest" th:href="@{/favicon/site.webmanifest}" />
+    <!--Tipografías-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <!--hoja de estilos bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--biblioteca iconos bootsrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--hoja de estilos css-->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+
+<body class="bg-light d-flex flex-column min-vh-100">
+
+    <!--nav-->
+    <nav class="navbar navbar-dark bg-dark mb-4 sticky-top z-3">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <a th:href="@{/admin}" class="btn btn-outline-light btn-sm me-2">Volver al Panel</a>
+                <span class="navbar-text text-light ms-3">Gestión de Habitantes</span>
+            </div>
+
+            <div class="d-flex align-items-center flex-nowrap">
+                <form th:action="@{/logout}" method="post" class="m-0">
+                    <button type="submit" class="btn btn-danger btn-sm">
+                        <i class="bi bi-box-arrow-right"></i> Salir
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    
+
+    <div class="container mb-5 flex-grow-1">
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h2 class="mb-4 mt-4 pt-4 text-center" th:text="${pageTitle}">Título</h2>
+                
+                <div class="card shadow border-0">
+                    <div class="card-body p-4">
+
+                        <form th:action="@{/admin/habitantes/guardar}" th:object="${residentDto}" method="post"><!--ruta mapeada a archivo (admin-formulario.html)-->
+                                                                                                                
+                            
+                            <input type="hidden" th:field="*{id}">
+
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Nombre del Habitante</label>
+                                    <input type="text" th:field="*{name}" class="form-control" placeholder="Ej. Pancitas">
+                                    <div class="text-danger small" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Especie</label>
+                                    <input type="text" th:field="*{species}" class="form-control" placeholder="Ej. Cerdo">
+                                    <div class="text-danger small" th:if="${#fields.hasErrors('species')}" th:errors="*{species}"></div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label fw-bold">URL de la Foto</label>
+                                    <input type="text" th:field="*{photoUrl}" class="form-control" placeholder="Ej. /imagenes/gato.jpg">
+                                    <div class="text-danger small" th:if="${#fields.hasErrors('photoUrl')}" th:errors="*{photoUrl}"></div>
+                                </div>
+
+                                <div class="col-12">
+                                    <label class="form-label fw-bold">Historia / Descripción</label>
+                                    <textarea th:field="*{story}" class="form-control" rows="4" placeholder="Cuéntanos su historia..."></textarea>
+                                    <div class="text-danger small" th:if="${#fields.hasErrors('story')}" th:errors="*{story}"></div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Tipo de Ayuda</label>
+                                    <select th:field="*{helpType}" class="form-select">
+                                        <option th:each="type : ${T(com.hogar.seguro.model.enums.HelpType).values()}" 
+                                                th:value="${type}" th:text="${type}"></option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label class="form-label fw-bold">Disponibilidad</label>
+                                    <div class="form-check form-switch mt-2">
+                                        <input class="form-check-input" type="checkbox" th:field="*{available}" id="availableSwitch">
+                                        <label class="form-check-label" for="availableSwitch">¿Está disponible?</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-5 d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="bi bi-save"></i> Guardar Habitante
+                                </button>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+<!--footer-->
+    <footer class="mt-auto">
+        <div class="container">
+            <div class="row justify-content-center">
+            <div class="row justify-content-center text-center">
+                <div class="col-9 col-md-8 copy">
+                    <p>Copyright © 2026 - Santuario Hogar Seguro Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

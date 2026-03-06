@@ -1,0 +1,366 @@
+<!DOCTYPE html> <!--Estructura html 5-->
+<html lang="es"> <!--Declaración lenguaje español-->
+
+<head>
+    <!--meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--título-->
+    <title>Habitantes - Hogar Seguro</title>
+    <!--meta descripción-->
+    <meta name="description"
+        content="Conoce a los habitantes no humanos del Santuario Hogar Seguro: Descubre las historias individuales de nuestros residentes, sus rescates y el cuidado que reciben. Explora las opciones de amadrinamiento o adopción y ayuda a transformar sus vidas. También honramos la memoria de aquellos que se han marchado, recordando su impacto en nuestra comunidad. Únete a nuestra misión de compasión y apoyo.">
+    <!--favicon-->
+    <link rel="icon" type="image/png" th:href="@{/favicon/favicon-96x96.png}" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" th:href="@{/favicon/favicon.svg}" />
+    <link rel="shortcut icon" th:href="@{/favicon/favicon.ico}" />
+    <link rel="apple-touch-icon" sizes="180x180" th:href="@{/favicon/apple-touch-icon.png}" />
+    <link rel="manifest" th:href="@{/favicon/site.webmanifest}" />
+    <!--Tipografías-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <!--hoja de estilos bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--biblioteca iconos bootsrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--hoja de estilos css-->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+<!--nav-->
+    <!-- MÓDULO GENERAL NAVBAR BOOTSTRAP 5 -->
+    <nav class="navbar navbar-expand-lg navbar-dark fondo-nav sticky-top" id="menu">
+
+        <!-- CONTAINER O CONTAINER FLUID -->
+        <div class="container-fluid nav-contenedor">
+
+            <!--nav de arriba-->
+            <div class="row align-items-center justify-content-end fila-nav">
+
+                <div class="col-auto">
+                   <a href="javascript:void(0);">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                </div>
+
+                <div class="col-auto">
+                   <a href="javascript:void(0);">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </div>
+
+                <div class="col-auto">
+                   <a href="https://wa.me/525534507699" target="_blank">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+
+            <!--nav de abajo-->
+            <!-- LOGO - PUEDE SER IMAGEN O TEXTO -->
+            <a class="navbar-brand col-1" href="#">
+                <img th:src="@{/imagenes/logo-nav.png}" alt="logo de santuario" class="img-fluid">
+            </a>
+
+
+            <!-- BOTÓN MENÚ DE HAMBURGUESA -->
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menu02">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- CONTENEDOR LISTA DE VÍNCULOS -->
+            <div class="navbar-collapse ml-auto collapse mt-auto nav-abajo" id="menu02">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center hamburguesa-colapsado">
+                    <!-- me-auto=IZQUIERDA / ms-auto=DERECHA -->
+                    <li class="nav-item">
+                        <a class="nav-link inicio" th:href="@{/}">
+                            INICIO <i class="bi bi-house-door-fill"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link habitantes" th:href="@{/habitantes}">
+                            HABITANTES <i class="bi bi-piggy-bank"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ayudar" th:href="@{/como-ayudar}">
+                            ¿CÓMO AYUDAR? <i class="bi bi-chat-square-heart-fill"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-abajo-redes">
+                        <a href="javascript:void(0);">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="javascript:void(0);">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/525534507699" target="_blank">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!--header-->
+    <header>
+        <!--img-hero con logo-->
+        <div class="container-fluid hero-logo habitantes-inicio">
+
+            <div class="row text-center">
+                <div class="col">
+                    <h1>Santuario Hogar Seguro</h1>
+                    <p class="bienvenido-p">BIENVENIDO</p>
+                    <img th:src="@{/imagenes/logo.png}" alt="logo de santuario">
+                </div>
+            </div>
+
+            <div class="row text-center justify-content-center habitantes-boton-header">
+                <div class="col-12 col-md-auto boton1">
+                    <a href="">
+                        <p>DONAR</p>
+                    </a>
+                </div>
+                <div class="col-12 col-md-auto boton2">
+                    <a href="">
+                        <p>¿CÓMO AYUDAR?</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+
+<!--section-1-habitantes-->
+    <section class="quienes habitantes">
+
+        <div class="container contenedor-quienes">
+
+            <div class="row justify-content-center text-start pb-5">
+                <div class="col col-12 col-md-11 col-lg-10">
+                    <h3>¡Conoce a los habitantes!</h3>
+                    <p class="p-inicial">Actualmente en Santuario Hogar Seguro, vive una gran número de habitantes
+                        que han llegado con el paso del tiempo, entre ellos, hay actualmente cerdos, patos, ovejas,
+                        cabras, perros, gatos, conejos, gallos, gallinas y zarigueyas.</p>
+                    <p class="p-inicial">Para nosotrxs es indispensable contar la historia de quienes habitan el
+                        santuario. De esa forma
+                        se
+                        les da rostro e identidad, dejando de ser un número para ser individuos singulares y complejos,
+                        con personalidades definidas, gustos especiales y particularidades que los hacen únicos. </p>
+                    <p class="p-inicial diferencia" id="seccion-habitantes">¡Aquí te contamos algunas de sus
+                        maravillosas historias!</p>
+
+                </div>
+            </div>
+
+            <div class="row justify-content-center text-start cuadros">
+
+                <!--CUADRO BASE (renderizado dinámico)-->
+
+                <div class="col-11 col-md-5 col-xl-3 cuadro m-3" th:each="resident : ${residents}">
+
+                    <img th:src="@{${resident.photoUrl}}" alt="fotografía del habitante">
+                    <p class="nombre-ziggy" th:text="${resident.name}">Nombre</p>
+                    <p class="habitantes-parrafo-largo" th:text="${resident.story}">Historia del habitante</p>
+                    
+                    <!--Contenedor de botones-->
+                    <div class="contenedor-botones-ayuda">
+                        <!-- AMADRINAR -->
+                        <a th:if="${resident.helpType.name() == 'AMADRINAR'}" 
+                            th:href="@{/solicitud(type='AMADRINAR', residentId=${resident.id})}" 
+                            th:classappend="${!resident.available} ? 'hidden' : ''">
+                            <p class="amadrinar">Amadrinar</p>
+                        </a>
+                        <!-- ADOPTAR -->
+                        <a th:if="${resident.helpType.name() == 'ADOPTAR'}" 
+                            th:href="@{/solicitud(type='ADOPTAR', residentId=${resident.id})}"
+                            th:classappend="${!resident.available} ? 'hidden' : ''">
+                            <p class="adoptar">Adoptar</p>
+                        </a>
+                    </div>
+                                    
+                </div>
+
+            </div>
+
+
+            
+        </div>
+
+    </section>
+
+
+<!--section-2-extrañamos-->
+    <section class="extrañamos">
+
+        <h3 class="habitantes-fallecidos">habitantes fallecidos</h3>
+
+        <div class="container extrañamos-contenedor-1">
+            <div class="row fila-historia1">
+                <div class="col text-center">
+                    <p class="quienes-extrañamos">A quienes extrañamos</p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center text-center contenedor-historia">
+                <div class="col-12 col-lg-5 cuadro-1 mx-3">
+                    <img th:src="@{/imagenes/coral.jpg}" alt="fotografía de cabra en blanco y negro">
+                    <p class="nombre-ziggy">Coral</p>
+                    <p><span>2016 - 2024</span></p>
+                    <p class="p-ziggy">Coral fue rescatada de una granja de producción de leche. Desde su nacimiento
+                        había sido explotada, maltratada y usada con fines lucrativos. En junio 2016 un grupo de
+                        activistas la rescato, la medico, acobijo y unos meses después llego a Hogar Seguro, donde
+                        desde entonces se le trató con la dignidad, amor y respeto que siempre mereció. La recordaremos
+                        siempre como era ella, alegre, cariñosa, traviesa y llena de energía y vitalidad.</p>
+                </div>
+
+                <div class="col-12 col-lg-5 cuadro-2 mx-3">
+                    <img th:src="@{/imagenes/rafa.jpg}" alt="fotografía de cerdo en blanco y negro">
+                    <p class="nombre-ziggy">Rafa</p>
+                    <p><span>2019 - 2022</span></p>
+                    <p class="p-ziggy">Rafa fue traído en condiciones de violencia y maltrato graves, cuando fue llevado
+                        a Hogar Seguro no estabamos seguros si sobreviviría, pero su fuerza y ganas de vivir eran
+                        tan grandes que logro salir adelante. Estamos felices de que sus últimos años de vida los pasara
+                        en un lugar seguro, con el amor, respeto y libertad que siempre anhelo. Lo recordaremos siempre
+                        por lo fuerte, resiliente y amoroso que fue a pesar de las adversidades.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+
+    <h5 class="section-h5-ayuda">Ayuda</h5>
+        <div class="container-fluid contenedor-botones">
+            <div class="row text-center justify-content-center">
+                <div class="col-12 col-md-auto boton1">
+                    <a th:href="@{/donar}">
+                        <p>DONAR</p>
+                    </a>
+                </div>
+                <div class="col-12 col-md-auto boton2">
+                    <a th:href="@{/como-ayudar#seccion-como-ayudar}">
+                        <p>¿CÓMO AYUDAR?</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+<!--footer-->
+    <footer>
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-auto col-xl-4 columna1">
+                    <p class="contactanos">CONTÁCTANOS</p>
+                    <div class="icono-texto contacta">
+                        <a href="mailto:contacto.vidadigna@gmail.com" target="_blank">
+                            <i class="bi bi-envelope"></i>
+                            <p>contacto.hogarseguro@gmail.com</p>
+                        </a>
+                    </div>
+
+                    <div class="icono-texto contacta">
+                         <a href="https://wa.me/525534507699" target="_blank">
+                            <i class="bi bi-whatsapp"></i>
+                            <p>+52 55 3450 7699</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-auto col-md-5 col-xl-4 columna2">
+                    <p class="redes">REDES</p>
+                    <div class="icono-texto media">
+                          <a href="javascript:void(0);">
+                            <p>Santuario Hogar Seguro</p>
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                    </div>
+
+                    <div class="icono-texto media">
+                           <a href="javascript:void(0);">
+                            <p>@hogar_seguro</p>
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center text-center">
+                <div class="col-9 col-md-8 copy">
+                    <p>Copyright © 2026 - Santuario Hogar Seguro Todos los derechos reservados.</p>
+                    <a th:href="@{/admin}" class="text-decoration-none text-muted" style="font-size: 0.7rem;">
+                        <i class="bi bi-lock"></i> Acceso Administrativo
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+<!--flecha fija-->
+    <a href="#menu02" class="hacia-arriba">
+        <img th:src="@{/imagenes/flecha-fija.png}" alt="flecha con dirección hacia arriba">
+    </a>
+
+
+
+<!--script smooth scrolling-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "" && $(this.hash).length) {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+
+
+<!--script bootstrap 5-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

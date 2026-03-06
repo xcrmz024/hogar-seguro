@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: hogar-seguro
+
+  datasource:
+    url: jdbc:mysql://${DB_HOST}/${DB_NAME}?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    hikari:
+      initialization-fail-timeout: -1
+
+  sql:
+    init:
+      mode: always
+
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+
+jwt:
+  secret:
+    key: ${JWT_SECRET_KEY}

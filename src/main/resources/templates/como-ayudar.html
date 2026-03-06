@@ -1,0 +1,492 @@
+<!DOCTYPE html> <!--Estructura html 5-->
+<html lang="es"> <!--Declaración lenguaje español-->
+
+<head>
+    <!--meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--título-->
+    <title>¿Cómo ayudar? - Hogar Seguro</title>
+    <!--meta descripción-->
+    <meta name="description"
+        content="Descubre cómo puedes apoyar al Santuario Hogar Seguro y su misión de rescate y cuidado animal. Explora diversas formas de colaborar, desde voluntariados y donaciones hasta programas de amadrinamiento y adopción. Tu apoyo es vital para continuar nuestras actividades y crear un mundo mejor para los animales. Únete a nuestra comunidad y marca la diferencia.">
+    <!--favicon-->
+    <link rel="icon" type="image/png" th:href="@{/favicon/favicon-96x96.png}" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" th:href="@{/favicon/favicon.svg}" />
+    <link rel="shortcut icon" th:href="@{/favicon/favicon.ico}" />
+    <link rel="apple-touch-icon" sizes="180x180" th:href="@{/favicon/apple-touch-icon.png}" />
+    <link rel="manifest" th:href="@{/favicon/site.webmanifest}" />
+    <!--Tipografías-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <!--hoja de estilos bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--biblioteca iconos bootsrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--hoja de estilos css-->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+<!--nav-->
+    <!-- MÓDULO GENERAL NAVBAR BOOTSTRAP 5 -->
+    <nav class="navbar navbar-expand-lg navbar-dark fondo-nav sticky-top" id="menu">
+
+        <!-- CONTAINER O CONTAINER FLUID -->
+        <div class="container-fluid nav-contenedor">
+
+            <!--nav de arriba-->
+            <div class="row align-items-center justify-content-end fila-nav">
+
+                <div class="col-auto">
+                     <a href="javascript:void(0);">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                </div>
+
+                <div class="col-auto">
+                     <a href="javascript:void(0);">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </div>
+
+                <div class="col-auto">
+                     <a href="https://wa.me/1234567890" target="_blank">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+
+            <!--nav de abajo-->
+            <!-- LOGO - PUEDE SER IMAGEN O TEXTO -->
+            <a class="navbar-brand col-1" href="#">
+                <img th:src="@{/imagenes/logo-nav.png}" alt="logo de santuario" class="img-fluid">
+            </a>
+
+
+            <!-- BOTÓN MENÚ DE HAMBURGUESA -->
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menu02">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- CONTENEDOR LISTA DE VÍNCULOS -->
+            <div class="navbar-collapse ml-auto collapse mt-auto nav-abajo" id="menu02">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center hamburguesa-colapsado">
+                    <!-- me-auto=IZQUIERDA / ms-auto=DERECHA -->
+                    <li class="nav-item">
+                        <a class="nav-link inicio" th:href="@{/}">
+                            INICIO <i class="bi bi-house-door-fill"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link habitantes" th:href="@{/habitantes}">
+                            HABITANTES <i class="bi bi-piggy-bank"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link ayudar" th:href="@{/como-ayudar}">
+                            ¿CÓMO AYUDAR? <i class="bi bi-chat-square-heart-fill"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-abajo-redes">
+                        <a href="javascript:void(0);">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="javascript:void(0);">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/525534507699" target="_blank">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!--header-->
+    <header class="header-ayudar">
+        <!--img-hero con logo-->
+        <div class="container-fluid hero-logo como-ayudar-inicio">
+
+            <div class="row text-center">
+                <div class="col">
+                    <h1>Santuario Hogar Seguro</h1>
+                    <p class="bienvenido-p">BIENVENIDO</p>
+                    <img th:src="@{/imagenes/logo.png}" alt="logo de santuario">
+                </div>
+            </div>
+
+            <div class="row text-center justify-content-center ayudar-boton-header">
+                <div class="col-12 col-md-auto boton1">
+                    <a href="">
+                        <p>DONAR</p>
+                    </a>
+                </div>
+                <div class="col-12 col-md-auto boton2" id="seccion-como-ayudar">
+                    <a href="">
+                        <p>¿CÓMO AYUDAR?</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+<!--section-1-colabora-->
+    <section class="colabora">
+
+        <div class="container-fluid contenedor-colabora-1">
+            <div class="row justify-content-center text-start">
+                <div class="col-11 col-md-10 col-xxl-8">
+                    <h3>Colabora con Santuario Hogar Seguro</h3>
+                    <p class="p-inicial">Santuario Hogar Seguro se mantiene en gran medida gracias a las generosas
+                        donaciones y apoyos que recibimos día a día. En el Santuario, dependemos de voluntarios
+                        dedicados, donativos y personas comprometidas que buscan el bienestar animal. </p>
+
+                    <p class="p-inicial">Tu ayuda es vital para mantener nuestro objetivo y proporcionar a nuestros
+                        habitantes la vida que merecen. Juntos, podemos continuar ofreciendo refugio, cuidado médico,
+                        alimentación y un hogar seguro para animales en necesidad, así seguimos construyendo un mundo
+                        sin especismo.</p>
+
+                    <p class="p-inicial diferencia">¡Tu apoyo marca la diferencia!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container contenedor-colabora">
+            <div class="row fila-colabora mx-1">
+                <div class="col-lg-6 ">
+                    <h4>Haz una donación</h4>
+                    <p>Es a través de las constantes donaciones que gran parte del Santuario Hogar Seguro se
+                        mantiene
+                        vigente, y con ello podemos continuar dando a los habitantes actuales y próximos la vida digna
+                        que
+                        merecen. Tu apoyo es de gran ayuda.</p>
+                    <p class="transferencia">Transferencia bancaria</p>
+                    <p>Juan Pérez López <br> <span class="subrayado">Cuenta:</span> 1581 1111 11 <br> <span
+                            class="subrayado">CLABE:</span> 1111 8115112 1111 11 <br>
+                        <span class="subrayado">Tarjeta:</span>
+                        4152 3111 1111 1111
+                    </p>
+                </div>
+
+                <div class="col-lg-5 px-0 ms-auto col-donar">
+
+                    <img th:src="@{/imagenes/dona.jpg}" alt="cajas de donativos">
+
+                    <div class="row justify-content-center text-center col-donar-boton">
+                        <div class="col-5 boton1">
+                            <a th:href="@{/donar}">
+                                <p>DONAR</p>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row fila-colabora mx-1">
+                <div class="col-lg-6">
+                    <h4>Voluntariados</h4>
+                    <p>Los voluntariados en Santuario Hogar Seguro son una parte fundamental de nuestra misión. A
+                        través de estas actividades, no solo contribuimos al bienestar y mantenimiento de nuestros
+                        residentes no humanos, sino que también promovemos una conciencia comunitaria y ecológica.</p>
+
+                    <p>Los voluntariados están diseñados para brindar apoyo en diversas áreas críticas del santuario.
+                        Entre las actividades más comunes se encuentran:
+                    <ul>
+                        <li>Reconstrucción y mantenimiento de las casas de los habitantes.</li>
+                        <li>Limpieza general de las instalaciones.</li>
+                        <li>Construcción de nuevos espacios.</li>
+                        <li>Baño y cuidado directo de los habitantes.</li>
+                    </ul>
+
+                    <p>Cada tarea es esencial para asegurar que nuestros habitantes
+                    vivan
+                    en un entorno seguro, limpio y confortable.</p>
+
+                    <p>Participar en un voluntariado no solo beneficia a los habitantes residentes, sino que también
+                        proporciona a
+                        los
+                        voluntarios una oportunidad única de conectarse con ellos, aprender sobre sus historias y
+                        entender
+                        la importancia de un trato digno y respetuoso hacia todas las especies. Además, estos programas
+                        son
+                        vitales para la sostenibilidad del santuario, ya que nos ayudan a mantener las instalaciones y a
+                        reducir costos operativos.</p>
+
+                    <p>Nuestros voluntariados son abiertos a personas de todas las edades y niveles de experiencia. Ya
+                        sea
+                        que vengas por un día, un fin de semana, o te unas a nosotros durante más tiempo, tu ayuda es
+                        invaluable. Cada voluntario se convierte en una parte esencial de nuestra comunidad, trabajando
+                        juntos para asegurar un futuro mejor y más compasivo para todos nuestros residentes.</p>
+
+                    <p>Únete a nosotros y sé parte del cambio positivo. ¡Tu tiempo y esfuerzo marcan una gran
+                        diferencia!
+                    </p>
+                </div>
+
+                <div class="col-lg-5 px-0 ms-auto col-voluntariados col-donar">
+
+                    <img th:src="@{/imagenes/voluntariados1.jpg}" alt="grupo de animales">
+                    <img th:src="@{/imagenes/voluntariados2.jpg}" alt="grupo de voluntarios en el campo">
+
+                    <div class="row">
+                        <div class="col text-center boton-quiero-saber">
+                            <a th:href="@{/solicitud(type='VOLUNTARIADO')}">
+                                <p>QUIERO AYUDAR</p>
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="pf" id="seccion-amadrinar"></div>
+            </div>
+
+
+
+            <div class="row fila-colabora mx-1">
+                <div class="col-lg-12 my-2">
+                    <h4>Amadrina</h4>
+                    <p>Amadrinar a uno de los habitantes del Santuario Hogar Seguro es una forma profunda y
+                        significativa de contribuir a su bienestar. Este programa permite a los patrocinadores brindar
+                        apoyo
+                        económico directo a un animal específico, cubriendo sus necesidades diarias como alimentación,
+                        cuidados médicos y mantenimiento de su hogar.
+                    </p>
+                    <p>Cuando decides amadrinar, te involucras en la vida de un residente no humano del santuario.
+                        Recibirás
+                        actualizaciones periódicas sobre su estado de salud, su comportamiento y cualquier evento
+                        especial
+                        en su vida. Esta conexión te permite ver de primera mano el impacto positivo de tu apoyo y
+                        fortalecer el vínculo con el animal amadrinado.</p>
+                </div>
+
+                <div class="col-12 col-xxl-6 my-2">
+                    <img th:src="@{/imagenes/amadrina.jpg}" alt="hombre cargando a una pequeña cabra">
+                </div>
+
+                <div class="col-12 col-xxl-5 my-2">
+                    <p>El programa de amadrinamiento no solo proporciona los recursos necesarios para cuidar
+                        adecuadamente a
+                        nuestros habitantes, sino que también nos ayuda a planificar y asegurar un futuro sostenible
+                        para el
+                        santuario. Gracias a los padrinos y madrinas, podemos ofrecer un entorno seguro y amoroso a cada
+                        animal rescatado.</p>
+                    <p>Participar en el programa de amadrinamiento es sencillo. Puedes elegir el habitante que deseas
+                        amadrinar, y con una contribución mensual, estarás cubriendo parte de sus gastos esenciales.
+                        Además,
+                        te invitamos a visitar el santuario y conocer personalmente a tu ahijado o ahijada, reforzando
+                        así
+                        el lazo especial que se crea a través del amadrinamiento.</p>
+
+                    <p>Tu apoyo es invaluable. Al amadrinar, no solo transformas la vida de un animal, sino que
+                        también
+                        te
+                        conviertes en un pilar fundamental de nuestra comunidad compasiva. </p>
+                    <p>¡Únete a nosotros y sé parte
+                        de
+                        este hermoso compromiso!</p>
+                </div>
+
+                <div class="col-12">
+                    <div class="row justify-content-center text-center">
+                        <div class="col-lg-4 col-xl-3 text-center ver-habitantes">
+                            <a th:href="@{/habitantes#seccion-habitantes}">
+                                <p>VER HABITANTES</p>
+                            </a>
+                        </div>
+                        <div class="col-lg-43 col-xl-3 text-center ver-habitantes-contactanos">
+                              <a href="https://wa.me/1234567890" target="_blank">
+                                <p>CONTÁCTANOS</p>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="pf" id="seccion-adoptar"></div>
+            </div>
+
+
+            <div class="row fila-colabora mx-1">
+                <div class="col-lg-12 my-2">
+                    <h4>Adopta</h4>
+                    <p>Adoptar a uno de los habitantes del Santuario Hogar Seguro es una manera hermosa y
+                        comprometida
+                        de ofrecerles un hogar amoroso y permanente. Nuestro programa de adopción está diseñado para
+                        asegurar que cada animal encuentre una familia que le brinde el cuidado, el respeto y el amor
+                        que
+                        merece.</p>
+                    <p>Cuando decides adoptar, asumes la responsabilidad de proporcionar un entorno seguro y adecuado
+                        para
+                        tu nuevo compañero. Esto incluye atender sus necesidades diarias, como alimentación, atención
+                        médica
+                        y tiempo de calidad. Cada adopción es cuidadosamente supervisada para garantizar que el
+                        bienestar
+                        del animal siempre sea la prioridad.</p>
+                </div>
+                <div class="col-12 col-xxl-6 my-2">
+                    <img th:src="@{/imagenes/adopta.jpg}" alt="hombre acariciando a perro">
+                </div>
+
+                <div class="col-12 col-xxl-5 my-2">
+                    <p>El proceso de adopción en nuestro santuario es riguroso y personalizado. Nos aseguramos de que
+                        cada
+                        adoptante esté bien informado sobre la historia, las necesidades y el comportamiento del animal
+                        que
+                        desea adoptar. Esto nos ayuda a hacer coincidir a nuestros habitantes con los hogares más
+                        adecuados,
+                        promoviendo así relaciones duraderas y felices.</p>
+                    <p>Adoptar a un habitante del santuario no solo cambia la vida del animal, sino que también
+                        enriquece la
+                        vida del adoptante. Nuestros animales han pasado por mucho y, con tu amor y cuidado, pueden
+                        experimentar una vida llena de alegría y seguridad.</p>
+                    <p>Te invitamos a considerar la adopción responsable como una manera de marcar una diferencia
+                        significativa. Tu hogar puede ser el lugar donde un animal rescatado finalmente encuentre paz y
+                        felicidad. Únete a nosotros en esta noble misión y da el paso para adoptar. </p>
+                    <p>¡Transforma una vida
+                        hoy!</p>
+                </div>
+
+                <div class="row justify-content-center text-center">
+                    <div class="col-xl-3 text-center ver-habitantes">
+                        <a th:href="@{/habitantes#seccion-habitantes}">
+                            <p>VER HABITANTES</p>
+                        </a>
+                    </div>
+                    <div class="col-xl-3 text-center ver-habitantes-contactanos">
+                          <a href="https://wa.me/1234567890" target="_blank">
+                            <p>CONTÁCTANOS</p>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container-fluid contenedor-ayudar-gracias">
+            <div class="row justify-content-center text-center fila-gracias">
+                <div class="col-11 col-md-10 col-xxl-8">
+                    <p class="gracias">¡Muchas gracias por tu ayuda!</p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+<!--footer-->
+    <footer>
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-auto col-xl-4 columna1">
+                    <p class="contactanos">CONTÁCTANOS</p>
+                    <div class="icono-texto contacta">
+                        <a href="mailto:contacto.vidadigna@gmail.com" target="_blank">
+                            <i class="bi bi-envelope"></i>
+                            <p>contacto.hogarseguro@gmail.com</p>
+                        </a>
+                    </div>
+
+                    <div class="icono-texto contacta">
+                        <a href="https://wa.me/525534507699" target="_blank">
+                            <i class="bi bi-whatsapp"></i>
+                            <p>+52 55 3450 7699</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-auto col-md-5 col-xl-4 columna2">
+                    <p class="redes">REDES</p>
+                    <div class="icono-texto media">
+                         <a href="javascript:void(0);">
+                            <p>Santuario Hogar Seguro</p>
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                    </div>
+
+                    <div class="icono-texto media">
+                         <a href="javascript:void(0);">
+                            <p>@hogar_seguro</p>
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center text-center">
+                <div class="col-9 col-md-8 copy">
+                    <p>Copyright © 2026 - Santuario Hogar Seguro Todos los derechos reservados.</p>
+                    <a th:href="@{/admin}" class="text-decoration-none text-muted" style="font-size: 0.7rem;">
+                        <i class="bi bi-lock"></i> Acceso Administrativo
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+<!--flecha fija-->
+    <a href="#menu02" class="hacia-arriba">
+        <img th:src="@{/imagenes/flecha-fija.png}" alt="flecha con dirección hacia arriba">
+    </a>
+
+
+
+<!--script smooth scrolling-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "" && $(this.hash).length) {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+
+
+<!--script bootstrap 5-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

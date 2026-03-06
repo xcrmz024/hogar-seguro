@@ -1,0 +1,136 @@
+<!DOCTYPE html> <!--Estructura html 5-->
+<html lang="es"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<head>
+    <!--meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--título-->
+    <title>Donaciones - Admin Hogar Seguro</title>
+    <!--meta descripción-->
+    <meta name="description" content="Panel administrativo para visualizar y gestionar las donaciones recibidas por el Santuario Hogar Seguro, con control claro y organizado del apoyo económico.">
+     <!--favicon-->
+    <link rel="icon" type="image/png" th:href="@{/favicon/favicon-96x96.png}" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" th:href="@{/favicon/favicon.svg}" />
+    <link rel="shortcut icon" th:href="@{/favicon/favicon.ico}" />
+    <link rel="apple-touch-icon" sizes="180x180" th:href="@{/favicon/apple-touch-icon.png}" />
+    <link rel="manifest" th:href="@{/favicon/site.webmanifest}" />
+    <!--Tipografías-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <!--hoja de estilos bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--biblioteca iconos bootsrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--hoja de estilos css-->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+
+<body class="bg-light d-flex flex-column min-vh-100">
+
+
+   <!--nav-->
+    <nav class="navbar navbar-dark bg-dark mb-4 sticky-top z-3">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <a th:href="@{/admin}" class="btn btn-outline-light btn-sm me-2">Volver al Panel</a>
+                <span class="navbar-text text-light ms-3">Gestión de Habitantes</span>
+            </div>
+
+            <div class="d-flex align-items-center flex-nowrap">
+                <form th:action="@{/logout}" method="post" class="m-0">
+                    <button type="submit" class="btn btn-danger btn-sm">
+                        <i class="bi bi-box-arrow-right"></i> Salir
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    
+
+    <div class="container mb-5 flex-grow-1">
+
+        <div class="d-flex justify-content-between align-items-end mb-4 mt-5">
+            <h2 class="mb-0">Historial de Donaciones</h2>
+            <div class="text-end">
+                <span class="text-muted small d-block">Total Recaudado</span>
+                <h3 class="text-success fw-bold mb-0" th:text="${'$' + totalAccumulated}">$0.00</h3>
+            </div>
+        </div>
+
+
+        <div class="card shadow border-0">
+            <div class="card-body p-0">
+                <div class="table-responsive">
+
+                    <!--donations table-->
+                    <table class="table table-hover align-middle mb-0">
+                        <thead class="table-dark">
+                            <tr>
+                                <th class="ps-4">Fecha</th>
+                                <th>Donante</th>
+                                <th>Email</th>
+                                <th>Monto</th>
+                                <th class="text-center">Mensaje</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr th:each="don : ${donations}">
+                                <td class="ps-4" th:text="${#temporals.format(don.date, 'dd/MM/yyyy HH:mm')}"></td>
+                                <td><strong th:text="${don.name}"></strong></td>
+                                <td th:text="${don.email}"></td>
+                                <td>
+                                    <span class="badge bg-success fs-6" th:text="${'$' + don.amount}"></span>
+                                </td>
+                                <td class="text-center">
+                                    <button th:if="${don.message != null and !don.message.isEmpty()}"
+                                            class="btn btn-sm btn-outline-primary"
+                                            th:data-msg="${don.message}"
+                                            onclick="alert('Mensaje del donante: ' + this.dataset.msg)">
+                                        <i class="bi bi-chat-heart"></i> Leer
+                                    </button>
+                                    <span th:unless="${don.message != null and !don.message.isEmpty()}" class="text-muted small">-</span>
+                                </td>
+                            </tr>
+
+                            <tr th:if="${#lists.isEmpty(donations)}">
+                                <td colspan="5" class="text-center py-5 text-muted">
+                                    Aún no se han registrado donaciones.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<!--footer-->
+    <footer class="mt-auto">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-9 col-md-8 copy">
+                    <p>Copyright © 2026 - Santuario Hogar Seguro Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
+
+

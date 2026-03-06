@@ -1,0 +1,625 @@
+<!DOCTYPE html> <!--Estructura html 5-->
+<html lang="es"> <!--Declaración lenguaje español-->
+
+<head>
+    <!--meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--título-->
+    <title>Inicio - Hogar Seguro</title>
+    <!--meta descripción-->
+    <meta name="description"
+        content="Hogar Seguro es un refugio comprometido con el rescate animal y la educación sobre veganismo y antiespecismo. Conoce nuestra historia, cómo nos originamos y las actividades de nuestros colaboradores que trabajan incansablemente para brindar una vida segura a los animales rescatados mientras te contamos como nos dedicamos a la autogestión sostenible del santuario, promoviendo una comunidad de compasión y cuidado. Únete a nosotros y forma parte de este hermoso compromiso.">
+    <!--favicon-->
+    <link rel="icon" type="image/png" th:href="@{/favicon/favicon-96x96.png}" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" th:href="@{/favicon/favicon.svg}" />
+    <link rel="shortcut icon" th:href="@{/favicon/favicon.ico}" />
+    <link rel="apple-touch-icon" sizes="180x180" th:href="@{/favicon/apple-touch-icon.png}" />
+    <link rel="manifest" th:href="@{/favicon/site.webmanifest}" />
+    <!--Tipografías-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <!--hoja de estilos bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--biblioteca iconos bootsrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--hoja de estilos css-->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+<!--nav-->
+    <!-- MÓDULO GENERAL NAVBAR BOOTSTRAP 5 -->
+    <nav class="navbar navbar-expand-lg navbar-dark fondo-nav sticky-top" id="menu">
+
+        <!-- CONTAINER O CONTAINER FLUID -->
+        <div class="container-fluid nav-contenedor">
+
+            <!--nav de arriba-->
+            <div class="row align-items-center justify-content-end fila-nav">
+
+                <div class="col-auto">
+                    <a href="javascript:void(0);">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                </div>
+
+                <div class="col-auto">
+                    <a href="javascript:void(0);">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                </div>
+
+                <div class="col-auto">
+                    <a href="https://wa.me/1234567890" target="_blank">
+                        <i class="bi bi-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+
+            <!--nav de abajo-->
+            <!-- LOGO - PUEDE SER IMAGEN O TEXTO -->
+            <a class="navbar-brand col-1" href="#">
+                <img th:src="@{/imagenes/logo-nav.png}" alt="logo de santuario" class="img-fluid">
+            </a>
+
+
+            <!-- BOTÓN MENÚ DE HAMBURGUESA -->
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menu02">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- CONTENEDOR LISTA DE VÍNCULOS -->
+            <div class="navbar-collapse ml-auto collapse mt-auto nav-abajo" id="menu02">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center hamburguesa-colapsado">
+                    <!-- me-auto=IZQUIERDA / ms-auto=DERECHA -->
+                    <li class="nav-item active">
+                        <a class="nav-link inicio" th:href="@{/}">
+                            INICIO <i class="bi bi-house-door-fill"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link habitantes" th:href="@{/habitantes}">
+                            HABITANTES <i class="bi bi-piggy-bank"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ayudar" th:href="@{/como-ayudar}">
+                            ¿CÓMO AYUDAR? <i class="bi bi-chat-square-heart-fill"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-abajo-redes">
+                        <a href="javascript:void(0);">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="javascript:void(0);">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                          <a href="https://wa.me/525534507699" target="_blank">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!--header-->
+    <header>
+        <!--img-hero con logo-->
+        <div class="container-fluid hero-logo index">
+
+            <div class="row text-center">
+                <div class="col">
+                    <h1>Santuario Hogar Seguro</h1>
+                    <p class="bienvenido-p">BIENVENIDO</p>
+                    <img th:src="@{/imagenes/logo.png}" alt="logo de santuario">
+                </div>
+            </div>
+
+            <div class="row text-center justify-content-center">
+                <div class="col-12 col-md-auto boton1">
+                    <a th:href="@{/donar}">
+                        <p>DONAR</p>
+                    </a>
+                </div>
+                <div class="col-12 col-md-auto boton2">
+                    <a th:href="@{/como-ayudar#seccion-como-ayudar}">
+                        <p>¿CÓMO AYUDAR?</p>
+                    </a>
+                </div>
+            </div>
+
+
+            <!--MENSAJE MONTO RECAUDADO-->
+            <div class="row text-center mt-4">
+                <div class="col-12">
+                    <p style="display: inline-block; background: rgba(0, 0, 0, 0.4); padding: 10px 20px; border-radius: 50px; color: white; font-family: 'Signika', sans-serif; font-size: 20px; border: 1px solid rgba(255,255,255,0.2);">
+                        Gracias a tu apoyo, hemos recaudado un total de: 
+                        <span style="color: #FFD700; font-weight: bold; font-size: 24px;" 
+                              th:text="${#numbers.formatCurrency(totalCollected)}">
+                              $0.00
+                        </span> 
+                    </p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </header>
+
+<!--section-1-quienes-->
+    <section class="quienes-somos">
+        <div class="container contenedor-quienes">
+            <div class="row justify-content-center">
+
+                <div class="col-lg-6">
+                    <div class="row gy-2">
+
+                        <div class="col-12">
+                            <h2>¿Quiénes somos?</h2>
+                            <p>Somos un santuario antiespecista que da refugio y cuidados a diferentes animales
+                                liberados de la opresión y el especismo. En este lugar sus habitantes viven de forma
+                                plena, libre y segura toda su vida.</p>
+                            <p>Nos dedicamos diariamente a construir un espacio seguro donde respetamos a los animales y
+                                nos preocupamos por su salud física y emocional. Buscamos que todos los habitantes,
+                                tanto humanos como animales rescatados, puedan desarrollarse plenamente. Creemos en la
+                                dignidad y el respeto a las personalidades y necesidades básicas de todos los seres,
+                                proporcionando un hogar donde se les trata dignamente. El santuario simboliza un oasis
+                                de convivencia respetuosa con todas las especies y el ecosistema.</p>
+                        </div>
+
+                        <div class="col-lg-11 col-xl-10 mision">
+                            <p><span>Misión</span></p>
+                            <p>Cuidar a individuos liberados de la opresión de la industria. Creando un lugar donde
+                                puedan vivir de manera plena y libre.</p>
+                        </div>
+                        <div class="col-lg-11 col-xl-10 vision">
+                            <p><span>Visión</span></p>
+                            <p>Demostrar que es posible construir territorios antiespecistas en los cuales todas las
+                                especies puedan convivir con respeto y seguridad.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-6 imagen-quienes">
+                    <img th:src="@{/imagenes/quienes.jpg}" alt="fotografía de activistas veganos" class="img-fluid">
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container-fluid px-0">
+            <div class="row mx-0">
+                <div class="col px-0">
+                    <img th:src="@{/imagenes/sep1.jpg}" alt="separador de seccion">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+<!--section-2-que-->
+    <section class="que-hacemos">
+
+        <div class="container contenedor-que">
+
+            <div class="row justify-content-center text-center pb-5">
+
+                <div class="col-12 col-md-10 col-lg-9">
+                    <h2>¿Qué hacemos?</h2>
+                    <p class="p-inicial">En Santuario Hogar Seguro, es nuestra prioridad mantener a los habitantes
+                        a salvo,
+                        asegurandoles un hogar seguro y vigente. Como comunidad,
+                        nos hemos encargado a lo largo de los años de iniciar algunas actividades en consonancia con
+                        los
+                        valores y visión del Santuario.</p>
+                </div>
+
+            </div>
+
+
+            <!--cajas abajo-->
+            <!--1 estructura cajas (col-xl-3)-->
+            <div class="container que-position-relative uno">
+
+                <div class="row rectangulo-que">
+                    <div class="col"></div>
+                </div>
+
+                <div class="row justify-content-center text-center cuadros que-position-relative">
+
+                    <div class="col-10 col-md-5 col-xl-3 mx-2 cuadro-1">
+                        <img th:src="@{/imagenes/resguardar.jpg}" alt="fotografía de animales">
+                        <p><span>Resguardar</span></p>
+                        <p>Resguardamos y en ocasiones rescatamos animales no humanos de distintas especies, además de
+                            otorgarles cobijo, medicina, alimento y techo de manera permanente en el santuario.</p>
+                    </div>
+
+                    <div class="col-10 col-md-5 col-xl-3 mx-2 cuadro-2">
+                        <img th:src="@{/imagenes/educar.jpg}" alt="fotografía de grupo de activistas">
+                        <p><span>Educar</span></p>
+                        <p>Por medio de diferentes medios de comunicación, brindamos a la sociedad educación en temas de
+                            especismo, siembra, permacultura, entre otros a través de la impartición de talleres
+                            esporádicos, pláticas, cursos y contenido recurrente en redes sociales.</p>
+                    </div>
+
+                    <div class="col-10 col-md-5 col-xl-3 mx-2 cuadro-3">
+                        <img th:src="@{/imagenes/autogestionar.jpg}" alt="fotografía mujer con gatos">
+                        <p><span>Autogestionar</span></p>
+                        <p>Para mantener activo y viable el santuario, organizamos actividades varias como los
+                            voluntariados, donativos monetarios y en especie, así como el amadrinamiento y adopción de
+                            los
+                            habitantes del santuario para su manutención.</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+        <!--2 estructura cajas (col-md-5)-->
+        <div class="container que-position-relative dos">
+
+            <div class="row rectangulo-que">
+                <div class="col"></div>
+            </div>
+
+            <div class="row justify-content-center text-center cuadros que-position-relative">
+
+                <div class="col-10 col-md-5 mx-2 cuadro-1">
+                    <img th:src="@{/imagenes/resguardar.jpg}" alt="fotografía de pato">
+                    <p><span>Resguardar</span></p>
+                    <p>Resguardamos y en ocasiones rescatamos animales no humanos de distintas especies, además de
+                        otorgarles cobijo, medicina, alimento y techo de manera permanente en el santuario.</p>
+                </div>
+
+                <div class="col-10 col-md-5 mx-2 cuadro-2">
+                    <img th:src="@{/imagenes/educar.jpg}" alt="fotografía de grupo de activistas">
+                    <p><span>Educar</span></p>
+                    <p>Por medio de diferentes medios de comunicación, brindamos a la sociedad educación en temas de
+                        especismo, siembra, permacultura, entre otros a través de la impartición de talleres
+                        esporádicos, pláticas, cursos y contenido recurrente en redes sociales.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="container que-position-relative dos">
+
+            <div class="row rectangulo-que">
+                <div class="col"></div>
+            </div>
+
+            <div class="row justify-content-center text-center cuadros que-position-relative">
+
+                <div class="col-10 col-md-5 mx-2 cuadro-3">
+                    <img th:src="@{/imagenes/autogestionar.jpg}" alt="fotografía mujer con folleto">
+                    <p><span>Autogestionar</span></p>
+                    <p>Para mantener activo y viable el santuario, organizamos actividades varias como los
+                        voluntariados, donativos monetarios y en especie, así como el amadrinamiento y adopción de
+                        los
+                        habitantes del santuario para su manutención.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!--3 estrucutra cajas (col-12)-->
+        <div class="container que-position-relative tres">
+
+            <div class="row rectangulo-que">
+                <div class="col"></div>
+            </div>
+
+            <div class="row justify-content-center text-center cuadros que-position-relative">
+
+                <div class="col-10 mx-2 cuadro-1">
+                    <img th:src="@{/imagenes/resguardar.jpg}" alt="fotografía de pato">
+                    <p><span>Resguardar</span></p>
+                    <p>Resguardamos y en ocasiones rescatamos animales no humanos de distintas especies, además de
+                        otorgarles cobijo, medicina, alimento y techo de manera permanente en el santuario.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="container que-position-relative tres">
+
+            <div class="row rectangulo-que">
+                <div class="col"></div>
+            </div>
+
+            <div class="row justify-content-center text-center cuadros que-position-relative">
+
+                <div class="col-10 mx-2 cuadro-2">
+                    <img th:src="@{/imagenes/educar.jpg}" alt="fotografía de grupo de activistas">
+                    <p><span>Educar</span></p>
+                    <p>Por medio de diferentes medios de comunicación, brindamos a la sociedad educación en temas de
+                        especismo, siembra, permacultura, entre otros a través de la impartición de talleres
+                        esporádicos, pláticas, cursos y contenido recurrente en redes sociales.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="container que-position-relative tres">
+
+            <div class="row rectangulo-que">
+                <div class="col"></div>
+            </div>
+
+            <div class="row justify-content-center text-center cuadros que-position-relative">
+
+                <div class="col-10 mx-2 cuadro-3">
+                    <img th:src="@{/imagenes/autogestionar.jpg}" alt="fotografía mujer con folleto">
+                    <p><span>Autogestionar</span></p>
+                    <p>Para mantener activo y viable el santuario, organizamos actividades varias como los
+                        voluntariados, donativos monetarios y en especie, así como el amadrinamiento y adopción de
+                        los
+                        habitantes del santuario para su manutención.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!--separador-->
+        <div class="container-fluid px-0">
+            <div class="row mx-0">
+                <div class="col px-0">
+                    <img th:src="@{/imagenes/sep3.jpg}" alt="separador de seccion 2" class="img-fluid">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+<!--section-3-historia-->
+    <section class="historia">
+
+        <div class="container contenedor-historia">
+
+            <div class="row justify-content-center text-center fila-historia1">
+                <div class="col-md-10 col-xl-10">
+                    <h2>Historia</h2>
+                    <p><span>Inicios (2010)</span></p>
+                    <p>En 2010 el proyecto empezó con una huerta como espacio establecido, espacio que
+                        principalmente
+                        operaba como
+                        escuela de cultivo dedicada a la enseñanza de la siembra, el cuidado del agua, las
+                        energías
+                        y diversas ecotecnologías.
+                        Sin embargo, el proyecto inicial cambiaría por la llegada de diversos animales a la zona:
+                        gallinas, cerdos, patos, todos
+                        en condiciones de vulnerabilidad y necesitando de un hogar seguro. Así, nacería Santuario
+                        Hogar Seguro.</p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-10 col-xl-5 col-fundacion">
+                    <p><span>Fundación (2010)</span></p>
+                    <p>Hogar Seguro se fundó en abril de 2010 en La Antigua, Veracruz. Esto,
+                        concretamente,
+                        fue gracias a Cristina, la primer oveja que llegó al santuario. La Cristina fue rescatada de
+                        una
+                        muerte segura en la carretera, a los alrededores de la Huerta. Fue recogida, curada y
+                        acogida.
+
+                        Al llegar Cristina al santuario ¡Todo cambio! porque poco a poco fueron cambiando las tareas
+                        diarias y el diseño de los espacios, dando paso a la creación de hábitats para gallos,
+                        gallinas
+                        y ovejas (quienes fueron los primeros habitantes
+                        de la Huerta durante los 4 primeros años). </p>
+                </div>
+                <div class="col-md-10 col-xl-5">
+                    <img th:src="@{/imagenes/gallina.jpg}" alt="gallina en el campo" class="w-100">
+                </div>
+            </div>
+
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-10 col-xl-5 col-expansion">
+                    <p><span>Expansión (2018 - actualidad)</span></p>
+                    <p>Con el tiempo, se involucraron más personas al proyecto
+                        y se convirtieron en parte fundamental del santuario.
+
+                        Así, la creación del Hogar Seguro surgió a
+                        partir de los valores que compartimos los fundadores y colaboradores: ensayar nuevas formas
+                        de
+                        convivencia
+                        entre especies, animales y humanos, respetando siempre
+                        el ecosistema a través de la ecología. Cubrimos las necesidades básicas de los animales
+                        rescatados, como
+                        cobijo, comida y medicina, pero también buscamos que puedan desarrollar su personalidad e
+                        individualidad para
+                        vivir una vida plena y digna.
+
+                        Nuestro santuario alberga actualmente conejos, una borreguita, una cabra, puerquitos,
+                        gallos,
+                        gallinas, patos
+                        y perros, además de animales silvestres de la zona. Respetamos el ecosistema mediante
+                        prácticas
+                        ecológicas y ecotecnias, utilizando materiales locales y manteniendo un equilibrio con
+                        la
+                        naturaleza. Este enfoque nació de nuestra preocupación por la explotación animal en
+                        la industria alimenticia y su impacto en el medio ambiente.</p>
+                </div>
+
+                <div class="col-md-10 col-xl-5">
+                    <img th:src="@{/imagenes/historia-2.jpg}" alt="campo abierto con animales" class="w-100">
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-md-10 col-2018">
+                    <img th:src="@{/imagenes/historia-3.jpg}" alt="señor con grupo de ovejas" class="img-fluid">
+                    <p>En 2019 decidimos abrir nuestras redes sociales y a partir de entonces tuvimos la fortuna de
+                        encontrar alianzas con diferentes personas y organizaciones, con las cuales nos fortalecimos
+                        y
+                        pudimos empezar a alojar a otras especies, como patos, guajolotes, cerdos, cabras y
+                        borregos.
+
+                        La clave del éxito de Hogar Seguro radica en no abusar, explotar ni reprimir a ningún
+                        ser
+                        vivo. Todos son vistos como iguales, seres sintientes, inteligentes y capaces de colaborar
+                        según
+                        sus capacidades para hacer del santuario un lugar productivo y seguro. Nuestro corazón está
+                        en
+                        la cooperación entre especies y con el medio ambiente, reutilizando recursos orgánicos para
+                        reducir la huella de carbono y rescatando, curando, alojando e integrando animales de
+                        distintas
+                        especies.
+
+                        Nada de esto sería posible sin la organización de nuestros colaboradores, que se encargan de
+                        impartir talleres, vender productos orgánicos, gestionar donativos y ofrecer actividades de
+                        amadrinamiento. Todo esto asegura la manutención del santuario y el bienestar de los
+                        animales
+                        que aquí viven.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="container contenedor-botones">
+            <div class="row text-center justify-content-center">
+                <div class="col-12 col-md-auto boton1">
+                    <a th:href="@{/donar}">
+                        <p>DONAR</p>
+                    </a>
+                </div>
+                <div class="col-12 col-md-auto boton2">
+                    <a th:href="@{/como-ayudar#seccion-como-ayudar}">
+                        <p>¿CÓMO AYUDAR?</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+<!--footer-->
+    <footer>
+        <div class="container">
+
+            <div class="row justify-content-center">
+
+                <div class="col-auto col-xl-4 columna1">
+                    <p class="contactanos">CONTÁCTANOS</p>
+                    <div class="icono-texto contacta">
+                        <a href="mailto:contacto.vidadigna@gmail.com" target="_blank">
+                            <i class="bi bi-envelope"></i>
+                            <p>contacto.hogarseguro@gmail.com</p>
+                        </a>
+                    </div>
+
+                    <div class="icono-texto contacta">
+                        <a href="https://wa.me/525534507699" target="_blank">
+                            <i class="bi bi-whatsapp"></i>
+                            <p>+52 55 3450 7699</p>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-auto col-md-5 col-xl-4 columna2">
+                    <p class="redes">REDES</p>
+                    <div class="icono-texto media">
+                        <a href="javascript:void(0);">
+                            <p>Santuario Hogar Seguro</p>
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                    </div>
+
+                    <div class="icono-texto media">
+                        <a href="javascript:void(0);">
+                            <p>@hogar_seguro</p>
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row justify-content-center text-center">
+                <div class="col-9 col-md-8 copy">
+                    <p>Copyright © 2026 - Santuario Hogar Seguro Todos los derechos reservados.</p>
+                    <a th:href="@{/admin}" class="text-decoration-none text-muted" style="font-size: 0.7rem;">
+                        <i class="bi bi-lock"></i> Acceso Administrativo
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+<!--flecha fija-->
+    <a href="#menu02" class="hacia-arriba">
+        <img th:src="@{/imagenes/flecha-fija.png}" alt="flecha con dirección hacia arriba">
+    </a>
+
+
+
+<!--script smooth scrolling-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "" && $(this.hash).length) {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+
+
+<!--script bootstrap 5-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
