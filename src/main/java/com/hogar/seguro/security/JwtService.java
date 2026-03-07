@@ -20,8 +20,17 @@ public class JwtService {
     private final String secretKey;
     private static final long EXPIRATION_TIME = 1000 * 60 * 60 * 10;//10 hours (ms)
 
-    public JwtService(@Value("${jwt.secret.key}") String secretKey) {
-        this.secretKey = secretKey;
+    public JwtService(@Value("${jwt.secret.key:}") String yamlKey) {
+
+        if (yamlKey == null || yamlKey.isEmpty() || yamlKey.contains("${")) {
+            this.secretKey = System.getenv("JWT_SECRET_KEY");
+        } else {
+            this.secretKey = yamlKey;
+        }
+
+        if (this.secretKey == null || this.secretKey.isEmpty()) {
+            throw new IllegalArgumentException("Error crítico: JWT_SECRET_KEY no encontrada en el entorno");
+        }
     }
 
 
