@@ -16,10 +16,6 @@ WORKDIR /app
 
 COPY --from=build /app/target/*.jar app.jar
 
-    #wait MySQL
-COPY wait-for-it.sh .
-RUN chmod +x wait-for-it.sh
-
 EXPOSE 8080
 
-ENTRYPOINT ["sh", "-c", "./wait-for-it.sh ${DB_HOST}:${DB_PORT} -- java -jar app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]

@@ -10,7 +10,7 @@ spring:
     username: ${DB_USER}
     password: ${DB_PASSWORD}
     hikari:
-      initialization-fail-timeout: -1
+      initialization-fail-timeout: 0
 
   sql:
     init:
