@@ -7,10 +7,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class HogarSeguroApplication {
     public static void main(String[] args) {
         SpringApplication.run(HogarSeguroApplication.class, args);
+
+
+
+        System.out.println("DEBUG - JWT_KEY: " + System.getenv("JWT_SECRET_KEY"));
+        SpringApplication.run(HogarSeguroApplication.class, args);
     }
-
-
-
 }
+
 
 
