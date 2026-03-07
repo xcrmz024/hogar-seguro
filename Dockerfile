@@ -22,4 +22,4 @@ RUN chmod +x wait-for-it.sh
 
 EXPOSE 8080
 
-ENTRYPOINT ["./wait-for-it.sh", "db:3306", "--", "java", "-jar", "app.jar"]
+ENTRYPOINT ["sh", "-c", "./wait-for-it.sh $DB_HOST:$DB_PORT -- java -jar app.jar"]
