@@ -17,7 +17,7 @@ public class Application {
     @Column(name = "applicant_name", nullable = false, length = 100)
     private String name;
 
-    @Column(nullable = false, length = 150)
+    @Column(unique = true, nullable = false, length = 150)
     private String email;
 
     @Column(name = "phone_number", nullable = false, length = 20)

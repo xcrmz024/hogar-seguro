@@ -20,16 +20,11 @@ public class JwtService {
     private final String secretKey;
     private static final long EXPIRATION_TIME = 1000 * 60 * 60 * 10;//10 hours (ms)
 
-    public JwtService(@Value("${jwt.secret.key:}") String yamlKey) {
-
-        if (yamlKey == null || yamlKey.isEmpty() || yamlKey.contains("${")) {
+    public JwtService(@Value("${jwt.secret.key}") String secretKey) {
+        if (secretKey == null || secretKey.contains("${")) {
             this.secretKey = System.getenv("JWT_SECRET_KEY");
         } else {
-            this.secretKey = yamlKey;
-        }
-
-        if (this.secretKey == null || this.secretKey.isEmpty()) {
-            throw new IllegalArgumentException("Error crítico: JWT_SECRET_KEY no encontrada en el entorno");
+            this.secretKey = secretKey;
         }
     }
 
@@ -44,13 +39,11 @@ public class JwtService {
         extraClaims.put("role", userDetails.getAuthorities());
 
         return Jwts.builder()
-
                 //--PAYLOAD:--
                 .claims(extraClaims)//extraClaim role
                 .subject(userDetails.getUsername())//sub claim
                 .issuedAt(new Date(System.currentTimeMillis()))//iat claim
                 .expiration(new Date(System.currentTimeMillis() + EXPIRATION_TIME))//exp claim
-
                 //--SIGNATURE:---
                 .signWith(getSigningKey())
 

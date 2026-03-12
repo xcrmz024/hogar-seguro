@@ -19,5 +19,10 @@ spring:
   jpa:
     defer-datasource-initialization: true
     hibernate:
-      ddl-auto: create-drop
-    show-sql: true
+      ddl-auto: update
+    show-sql: false
+
+
+jwt:
+  secret:
+    key: ${JWT_SECRET_KEY}

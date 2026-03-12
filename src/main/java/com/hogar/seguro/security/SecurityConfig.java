@@ -51,16 +51,13 @@ public class SecurityConfig {
                         .anyRequest().authenticated()
                 )
 
-                //----JWT Filter-------------
+
+                //JWT FILTER:
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
 
-                //----Login Configuration----
-                .formLogin(form -> form
-                                .loginPage("/login")//login form
-                                .permitAll()
-                )
 
-                //----Logout Configuration----
+
+                //----logout----
                 .logout(logout -> logout
                         .logoutUrl("/logout")
                         .deleteCookies("jwt") //delete jwt cookie
@@ -77,16 +74,16 @@ public class SecurityConfig {
     }
 
 
+
+
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration authConfig) throws Exception {
         return authConfig.getAuthenticationManager();
-
     }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
-
     }
 
     //allow Spring to ignore static folders (no filters)

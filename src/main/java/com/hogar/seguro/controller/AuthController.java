@@ -54,6 +54,7 @@ public class AuthController {
             return "redirect:/admin";
 
         } catch (Exception e) {
+            System.out.println("Error in login: " + e.getMessage());
             return "redirect:/login?error=true";
         }
 

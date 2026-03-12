@@ -21,7 +21,7 @@ public class Resident {
     @Column(nullable = false, length = 50)
     private String species;
 
-    @Column(nullable = false, length = 320)
+    @Column(unique = true, nullable = false, length = 320)
     private String story;
 
     @Column(name = "photo_url", nullable = false, length = 500)
