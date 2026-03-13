@@ -14,10 +14,9 @@ spring:
 
   sql:
     init:
-      mode: always
+      mode: never
 
   jpa:
-    defer-datasource-initialization: true
     hibernate:
       ddl-auto: update
     show-sql: false
