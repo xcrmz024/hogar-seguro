@@ -6,21 +6,16 @@ spring:
     name: hogar-seguro
 
   datasource:
-    url: jdbc:mysql://${DB_HOST}/${DB_NAME}?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    url: jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
     username: ${DB_USER}
     password: ${DB_PASSWORD}
     hikari:
       initialization-fail-timeout: 0
 
-  sql:
-    init:
-      mode: never
-
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: false
-
 
 jwt:
   secret:
