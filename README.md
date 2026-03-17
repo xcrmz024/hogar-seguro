@@ -1,19 +1,19 @@
 # HogarSeguro - Sistema de Gestión Integral para Santuario Animal
 
----
+
 **HogarSeguro** es una plataforma web diseñada para la gestión integral de un santuario animal.
 
-El sistema permite administrar animales rescatados, gestionar procesos de adopción o amadrinamiento, registrar donaciones y manejar solicitudes mediante un panel administrativo.
+El sistema permite administrar animales rescatados, gestionar procesos de adopción, amadrinamiento y voluntariado, además de registrar donaciones y manejar solicitudes mediante un panel administrativo.
 
 
-## 🌐 Demo
+## 🌐 Live demo
 
----
-...
+
+https://hogar-seguro-production.up.railway.app/
 
 ## 🔧 Stack Tecnológico
 
----
+
 **Backend**
 - Java 21
 - Spring Boot 3
@@ -44,33 +44,34 @@ El sistema permite administrar animales rescatados, gestionar procesos de adopci
 **Infraestructura**
 - Docker
 - Docker Compose
+- Railway (PaaS)
 
 
 ## ✨ Características principales
 
----
+
 - **Panel administrativo:** (CRUD para la gestión del santuario) protegido con autenticación y autorización mediante Spring Security.
 - **Autenticación** basada en JWT almacenado en cookies HttpOnly.
 - **Gestión Dinámica de Habitantes:** Carga automatizada de perfiles desde la
   base de datos.
 - **Sistema de Solicitudes:** Formulario inteligente con Bean Validation para Adopciones,
-  Amadrinamientos y Voluntariado.
+  Amadrinamientos y Voluntariados.
 - **Portal de Donaciones:** Interfaz simulada para el registro y gestión de apoyo
-  económico.
+  económico simulado.
 - **Diseño Responsivo:** Interfaz optimizada para móviles y escritorio usando
-  Bootstrap
-- Arquitectura en capas/ patron **MVC**
+  Bootstrap.
+- Arquitectura en capas/ patrón **MVC**.
 
 
 
-## 🐳 Instalación y Ejecución con Docker
+## 🐳 Instalación y Ejecución con Docker (local)
 
----
+
 Para ejecutar este proyecto localmente sin necesidad de configurar una base de datos manual, asegúrate de tener instalado **Docker Desktop**.
 
 1. **Clonar este repositorio:**
    ```bash
-   git clone https://github.com/usario_pnd/repo_name.git
+   git clone https://github.com/xcrmz024/hogar-seguro
    cd repo_name
    ```
    
@@ -98,10 +99,23 @@ Para ejecutar este proyecto localmente sin necesidad de configurar una base de d
    http://localhost:8080
 
 
+### Demo (credenciales)
+
+**Admin access (admin panel)**
+
+ - usernname: admin
+ - password: admin123
+
+
+*Estas credenciales son sólo para uso demostrativo.*
+    
+
+
 ## 📝 Disclaimer
 
----
-Este proyecto fue desarrollado con fines académicos y de portafolio. Los datos, nombres y fotografías de los animales son ficticios y utilizados para demostración técnica. Inspirado en la labor real de un santuario animal.
+
+Este proyecto fue desarrollado con fines académicos y de portafolio. Los datos, nombres y fotografías de los animales son ficticios y utilizados para demostración técnica. 
+Inspirado en la labor real de un santuario animal.
 
 ---
-**Desarrollado por x**
+**Desarrollado por [xcrmz024](https://github.com/xcrmz024)**
